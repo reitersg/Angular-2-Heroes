@@ -1,0 +1,10 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = ".container text-center" >
+  <h2>This is the list of heroes</h2>
+    <div class="list-group">
+      <a href="#" *ngFor="let hero of heroes" class = "list-group-item list-group-item-action"(click)="onSelect(hero)">
+        <span class="badge badge-primary">{{hero.id}}</span> {{hero.name}}
+      </a>
+    </div>
+    <hero-detail [hero]="selectedHero"></hero-detail>
+</div>
